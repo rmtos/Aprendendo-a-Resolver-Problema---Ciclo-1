@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="date"],
+        select {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            font-size: 16px;
+        }
+
+        select {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #008000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #006600;
+        }
+    </style>
+
+</head>
+
+<body>
+    Curso de Engenharia de Software - UniEVANGÉLICA<br>
+    Disciplina de Programação Web<br>
+    Dev: Renan Oliveira Matos<br>
+    02/04/2023<br>
+    <form>
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required><br>
+
+        <label for="horario">Horário:</label>
+        <select id="horario" name="horario" required>
+            <option value="">Selecione um horário</option>
+            <option value="09:00">09:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+        </select><br>
+
+        <label for="medico">Médico:</label>
+        <select id="medico" name="medico" required>
+            <option value="">Selecione um médico</option>
+            <option value="Dr. João">Dr. João</option>
+            <option value="Dr. Maria">Dr. Maria</option>
+            <option value="Dr. Pedro">Dr. Pedro</option>
+        </select><br>
+
+        <label for="tipo_consulta">Tipo de consulta:</label>
+        <select id="tipo_consulta" name="tipo_consulta" required>
+            <option value="">Selecione um tipo de consulta</option>
+            <option value="Consulta Geral">Consulta Geral</option>
+            <option value="Consulta Especializada">Consulta Especializada</option>
+        </select><br>
+
+        <input formaction=consulta_paciente.html type="submit" value="Agendar">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- Definição do tipo de documento HTML5 -->
+<html lang="en">
+<!-- Elemento raiz do documento -->
+
+<head>
+    <!-- Cabeçalho do documento -->
+    <meta charset="UTF-8">
+    <!-- Codificação de caracteres UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Força o Internet Explorer a usar a versão mais recente do mecanismo de renderização -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define a escala da página para que se adapte a diferentes tamanhos de tela -->
+    <title>Agendamento</title>
+    <!-- Título da página -->
+    <style>
+        /* Estilos CSS */
+        label {
+            display: block;
+            /* Define o elemento como bloco para que ocupe toda a largura da linha */
+            margin-bottom: 10px;
+            /* Define a margem inferior */
+            font-weight: bold;
+            /* Define o peso da fonte como negrito */
+        }
+
+        input[type="date"],
+        select {
+            padding: 10px;
+            /* Define o preenchimento interno do elemento */
+            margin-bottom: 20px;
+            /* Define a margem inferior */
+            border-radius: 5px;
+            /* Define o raio do arredondamento das bordas */
+            border: none;
+            /* Remove a borda padrão */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            /* Adiciona uma sombra ao elemento */
+            font-size: 16px;
+            /* Define o tamanho da fonte */
+        }
+
+        select {
+            width: 100%;
+            /* Define a largura do elemento como 100% */
+            max-width: 100%;
+            /* Define a largura máxima do elemento como 100% */
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            /* Define o preenchimento interno do elemento */
+            background-color: #008000;
+            /* Define a cor de fundo */
+            color: #fff;
+            /* Define a cor do texto */
+            border: none;
+            /* Remove a borda padrão */
+            border-radius: 5px;
+            /* Define o raio do arredondamento das bordas */
+            font-size: 16px;
+            /* Define o tamanho da fonte */
+            cursor: pointer;
+            /* Define o cursor do mouse como "mãozinha" */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #006600;
+            /* Define a cor de fundo ao passar o mouse por cima do elemento */
+        }
+    </style>
+
+</head>
+
+
+<body>
+    Curso de Engenharia de Software - UniEVANGÉLICA<br>
+    Disciplina de Programação Web<br>
+    Dev: Renan Oliveira Matos<br>
+    02/04/2023<br>
+    <h1>Consulta de Pacientes</h1>
+
+    <form>
+        <label for="busca">Buscar por nome ou CPF:</label>
+        <input type="text" id="busca" name="busca">
+
+        <input type="submit" value="Buscar">
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Data de Nascimento</th>
+                <th>CPF</th>
+                <th>Endereço</th>
+                <th>Telefone</th>
+                <th>Outros</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-pacientes">
+            <!-- lista de pacientes será gerada dinamicamente aqui -->
+        </tbody>
+    </table>
+
+    <script src="consulta_pacientes.js"></script>
+</body>
+
+</html>
